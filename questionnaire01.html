@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用餐滿意度調查</title>
+
+    <!-- 設定ICON -->
+    <link href="./cutlery.png" rel="icon" type="image/png">
+    <!-- 加入style設定樣式 -->
+    <style>
+        header img {
+            width: 100%;
+            height: 381.7px;
+            object-fit: cover;
+        }
+
+        h1 {
+            color: rgb(122, 15, 122);
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(255, 245, 232);
+            border: solid 5px rgba(122, 15, 122, 0.651);
+            border-style: outset;
+
+            min-width: 480px;
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .statement {
+            border: dashed 1px rgba(122, 15, 122);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body img {
+            width: 100%;
+            height: 381.7px;
+            object-fit: cover;
+        }
+
+        .buttonsize{
+            display: flex;
+            justify-content: center;
+            margin: 15px;  
+        }
+
+        button {
+            font-size: 20px;     
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .a-back {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        footer {
+            font-size: small;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--header加入圖片-->
+    <header>
+
+        <img class="img1" src="./steak.jpg" alt="steak">
+        <h1>用餐滿意度調查</h2>
+
+    </header>
+
+    <blockquote>
+        <!-- section -->
+        <section>
+            <form>
+                <p style="font-size: larger;"> 您對今日用餐的滿意程度：</p>
+
+                整體
+                <p>
+                    <input type="radio" name="all" id="a5">
+                    <label for="a5">非常滿意</label>
+
+                    <input type="radio" name="all" id="a4">
+                    <label for="a4">滿意</label>
+
+                    <input type="radio" name="all" id="a3">
+                    <label for="a3">普通</label>
+
+                    <input type="radio" name="all" id="a2">
+                    <label for="a2">不滿意</label>
+
+                    <input type="radio" name="all" id="a1">
+                    <label for="a1">非常不滿意</label>
+                </p>
+
+                環境
+                <p>
+                    <input type="radio" name="amb" id="b5">
+                    <label for="b5">非常滿意</label>
+
+                    <input type="radio" name="amb" id="b4">
+                    <label for="b4">滿意</label>
+
+                    <input type="radio" name="amb" id="b3">
+                    <label for="b3">普通</label>
+
+                    <input type="radio" name="amb" id="b2">
+                    <label for="b2">不滿意</label>
+
+                    <input type="radio" name="amb" id="b1">
+                    <label for="b1">非常不滿意</label>
+                </p>
+
+                服務
+                <p>
+                    <input type="radio" name="serve" id="c5">
+                    <label for="c5">非常滿意</label>
+
+                    <input type="radio" name="serve" id="c4">
+                    <label for="c4">滿意</label>
+
+                    <input type="radio" name="serve" id="c3">
+                    <label for="c3">普通</label>
+
+                    <input type="radio" name="serve" id="c2">
+                    <label for="c2">不滿意</label>
+
+                    <input type="radio" name="serve" id="c1">
+                    <label for="c1">非常不滿意</label>
+                </p>
+
+                餐點
+                <p>
+                    <input type="radio" name="food" id="d5">
+                    <label for="d5">非常滿意</label>
+
+                    <input type="radio" name="food" id="d4">
+                    <label for="d4">滿意</label>
+
+                    <input type="radio" name="food" id="d3">
+                    <label for="d3">普通</label>
+
+                    <input type="radio" name="food" id="d2">
+                    <label for="d2">不滿意</label>
+
+                    <input type="radio" name="food" id="d1">
+                    <label for="d1">非常不滿意</label>
+                </p>
+
+                價位
+                <p>
+                    <input type="radio" name="price" id="e5">
+                    <label for="e5">非常滿意</label>
+
+                    <input type="radio" name="price" id="e4">
+                    <label for="e4">滿意</label>
+
+                    <input type="radio" name="price" id="e3">
+                    <label for="e3">普通</label>
+
+                    <input type="radio" name="price" id="e2">
+                    <label for="e2">不滿意</label>
+
+                    <input type="radio" name="price" id="e1">
+                    <label for="e1">非常不滿意</label>
+                </p>
+
+                <p style="font-size: larger;"> 您對於今天各餐點的滿意程度：</p>
+
+                開胃品
+                <p>
+                    <input type="radio" name="appetizer" id="f5">
+                    <label for="f5">非常滿意</label>
+
+                    <input type="radio" name="appetizer" id="f4">
+                    <label for="f4">滿意</label>
+
+                    <input type="radio" name="appetizer" id="f3">
+                    <label for="f3">普通</label>
+
+                    <input type="radio" name="appetizer" id="f2">
+                    <label for="f2">不滿意</label>
+
+                    <input type="radio" name="appetizer" id="f1">
+                    <label for="f1">非常不滿意</label>
+                </p>
+
+                沙拉
+                <p>
+                    <input type="radio" name="salad" id="g5">
+                    <label for="g5">非常滿意</label>
+
+                    <input type="radio" name="salad" id="g4">
+                    <label for="g4">滿意</label>
+
+                    <input type="radio" name="salad" id="g3">
+                    <label for="g3">普通</label>
+
+                    <input type="radio" name="salad" id="g2">
+                    <label for="g2">不滿意</label>
+
+                    <input type="radio" name="salad" id="g1">
+                    <label for="g1">非常不滿意</label>
+                </p>
+
+                湯品
+                <p>
+                    <input type="radio" name="soup" id="h5">
+                    <label for="h5">非常滿意</label>
+
+                    <input type="radio" name="soup" id="h4">
+                    <label for="h4">滿意</label>
+
+                    <input type="radio" name="soup" id="h3">
+                    <label for="h3">普通</label>
+
+                    <input type="radio" name="soup" id="h2">
+                    <label for="h2">不滿意</label>
+
+                    <input type="radio" name="soup" id="h1">
+                    <label for="h1">非常不滿意</label>
+                </p>
+
+                主餐
+                <p>
+                    <input type="radio" name="meal" id="i5">
+                    <label for="i5">非常滿意</label>
+
+                    <input type="radio" name="meal" id="i4">
+                    <label for="i4">滿意</label>
+
+                    <input type="radio" name="meal" id="i3">
+                    <label for="i3">普通</label>
+
+                    <input type="radio" name="meal" id="i2">
+                    <label for="i2">不滿意</label>
+
+                    <input type="radio" name="meal" id="i1">
+                    <label for="i1">非常不滿意</label>
+                </p>
+
+                甜點
+                <p>
+                    <input type="radio" name="dessert" id="j5">
+                    <label for="j5">非常滿意</label>
+
+                    <input type="radio" name="dessert" id="j4">
+                    <label for="j4">滿意</label>
+
+                    <input type="radio" name="dessert" id="j3">
+                    <label for="j3">普通</label>
+
+                    <input type="radio" name="dessert" id="j2">
+                    <label for="j2">不滿意</label>
+
+                    <input type="radio" name="dessert" id="j1">
+                    <label for="j1">非常不滿意</label>
+                </p>
+
+                飲料
+                <p>
+                    <input type="radio" name="drink" id="k5">
+                    <label for="k5">非常滿意</label>
+
+                    <input type="radio" name="drink" id="k4">
+                    <label for="k4">滿意</label>
+
+                    <input type="radio" name="drink" id="k3">
+                    <label for="k3">普通</label>
+
+                    <input type="radio" name="drink" id="k2">
+                    <label for="k2">不滿意</label>
+
+                    <input type="radio" name="drink" id="k1">
+                    <label for="k1">非常不滿意</label>
+                </p>
+
+                <p style="font-size: larger;"> 對於本店或服務人員的建議：</p>
+                <textarea name="suggest" cols="30" rows="5" placeholder="請填入文字"></textarea>
+
+                <div class="statement">
+                    <p style="font-size: larger;">為提供更好的服務，請讓我們更了解您一點！</p>
+                    <P style="color:gray">
+                        本問卷蒐集來的資訊，僅會作為內部服務改善使用，
+                        <br>
+                        絕不外洩也不會作為其他用途使用，敬請放心填寫！
+                    </p>
+                </div>
+
+                <p style="font-size: larger;"> 這是您第幾次到本店用餐？</p>
+                <p>
+                    <input type="radio" name="frequency" id="t1">
+                    <label for="t1">第1次</label>
+
+                    <input type="radio" name="frequency" id="t2">
+                    <label for="t2">2-3次</label>
+
+                    <input type="radio" name="frequency" id="t4">
+                    <label for="t4">4-6次</label>
+
+                    <input type="radio" name="frequency" id="t6">
+                    <label for="t6">6次以上</label>
+
+                    <input type="radio" name="frequency" id="tn">
+                    <label for="tn">來過，但忘記次數</label>
+                </p>
+
+                <p style="font-size: larger;"> 您是從哪裡得知本店呢？ (可複選) </p>
+
+                <p>
+                    <input type="checkbox" name="hwkn" id="ff">
+                    <label for="ff">親友介紹</label>
+
+                    <input type="checkbox" name="hwkn" id="fp">
+                    <label for="fp">宣傳傳單</label>
+
+                    <input type="checkbox" name="hwkn" id="fn">
+                    <label for="fn">網路資訊</label>
+
+                    <input type="checkbox" name="hwkn" id="fl">
+                    <label for="fl">經過看到</label>
+
+                    <input type="checkbox" name="hwkn" id="fo">
+                    <label for="fo">其他管道</label>
+                </p>
+
+                <p style="font-size: larger;"> 請問您今天用餐的目的是？ (可複選) </p>
+
+                <p>
+                    <input type="checkbox" name="purpose" id="eat">
+                    <label for="eat">單純用餐</label>
+
+                    <input type="checkbox" name="purpose" id="frg">
+                    <label for="frg">朋友聚會</label>
+
+                    <input type="checkbox" name="purpose" id="fag">
+                    <label for="fag">家庭聚會</label>
+
+                    <input type="checkbox" name="purpose" id="dating">
+                    <label for="dating">情侶約會</label>
+
+                    <input type="checkbox" name="purpose" id="bd">
+                    <label for="bd">生日慶祝</label>
+
+                    <input type="checkbox" name="purpose" id="hd">
+                    <label for="hd">節日慶祝</label>
+
+                    <input type="checkbox" name="purpose" id="bus">
+                    <label for="bus">商務活動</label>
+
+                    <input type="checkbox" name="purpose" id="yd">
+                    <label for="yd">尾牙春酒</label>
+
+                    <input type="checkbox" name="purpose" id="otherp">
+                    <label for="otherp">其他目的</label>
+                </p>
+
+                <p>
+                    <label for="people" style="font-size: larger;"> 請問您今天是幾位用餐呢？ </label>
+                    <br>
+                    <input type="number" min="1" value="1" id="people">位
+                </p>
+
+                <P>
+                    <label for="again" style="font-size: larger;">您再次前來本店用餐的意願：</label>
+                    <br>
+                    <label for="again" style="color:gray;">(0 到 10 分，您的意願有多高呢？)</label>
+                    <br>
+                    <select name="come" id="again">
+                        <option value="ca0">0</option>
+                        <option value="ca1">1</option>
+                        <option value="ca2">2</option>
+                        <option value="ca3">3</option>
+                        <option value="ca4">4</option>
+                        <option value="ca5">5</option>
+                        <option value="ca6">6</option>
+                        <option value="ca7">7</option>
+                        <option value="ca8">8</option>
+                        <option value="ca9">9</option>
+                        <option value="ca10">10</option>
+                    </select>
+                </P>
+
+                <p style="font-size: larger;">個人資訊</p>
+                <p style="color:gray">本問卷蒐集來的資訊，僅會作為內部服務改善使用 絕不外洩也不會作為其他用途使用，敬請放心填寫！</p>
+
+
+                <p>
+                    姓名：
+                    <br>
+                    <input type="text" placeholder="請填入文字">
+                </p>
+
+                <p>
+                    性別：
+                    <br>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">生理男</label>
+                    <br>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">生理女</label>
+                </p>
+
+                <p>
+                    生日：
+                    <br>
+                    <input type="date">
+                </p>
+
+                <p>
+                    電話：
+                    <br>
+                    <input type="tel" placeholder="請填入電話號碼">
+
+                </p>
+
+                <p>
+                    信箱：
+                    <br>
+                    <input type="email" placeholder="請填入電子信箱">
+
+                </p>
+
+                <p style="margin: 0;font-size: larger;">是否願意收到本店最新活動與優惠訊息？</p>
+                <p style="margin: 0;color:gray;">若不願意，您的信箱只會收到會員相關的重要訊息。</p>
+                <p style="margin: 0;">
+                    <input type="radio" name="agree" id="y">
+                    <label for="y">願意</label>
+                    <br>
+                    <input type="radio" name="agree" id="n">
+                    <label for="n">不願意</label>
+                </p>
+
+                <div class="statement">
+                    <p style="font-size: larger;">感謝您耐心的填寫，期待您的再次光臨！</p>
+                    <p>請記得點選下方的「送出問卷」，向服務人員領取「小禮物」唷！</p>
+                </div>
+
+                <div class="buttonsize">
+                    <button>
+                        <a href="./submit01.html">送出，領取小禮物</a>
+                    </button>
+                </div>
+
+            </form>
+
+            <a class="a-back" href="#">Back to top</a>
+
+        </section>
+
+    </blockquote>
+
+    <img src="./gift.jpg" alt="感謝">
+
+    <!--footer 加入ICON來源、圖片來源-->
+    <footer>
+        <p>
+            Icon來源：https://www.flaticon.com/free-icon/cutlery_308099?term=food&related_id=308099
+            <br>
+            圖片來源：https://www.pexels.com/zh-tw/
+        </p>
+    </footer>
+
+</body>
+
+</html>
